@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <link
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Clone</title>
+
+  <link rel="stylesheet" href="index.css">
+
+  <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-    rel="stylesheet"/>
+    rel="stylesheet"
+  />
 </head>
+
 <body>
-    <div id="nav">
-        <h4><i class="ri-apple-fill"></i></h4>
-        <h4>Mac</h4>
-        <h4>ipad</h4>
-        <h4>iphone</h4>
-        <h4>watch</h4>
-        <h4>Vision</h4>
-        <h4>Airpods</h4>
-        <h4>Entertainment</h4>
-        <h4>Support</h4>
-        <h4><i class="ri-search-line"></i></h4>
-        <h4><i class="ri-shopping-bag-4-line"></i></h4>
+
+  <!-- NAVBAR -->
+  <div id="nav">
+    <h4><i class="ri-apple-fill"></i></h4>
+    <h4>Mac</h4>
+    <h4>iPad</h4>
+    <h4>iPhone</h4>
+    <h4>Watch</h4>
+    <h4>Vision</h4>
+    <h4>AirPods</h4>
+    <h4>Entertainment</h4>
+    <h4>Support</h4>
+    <h4><i class="ri-search-line"></i></h4>
+    <h4><i class="ri-shopping-bag-4-line"></i></h4>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div id="center">
+    <h1>iPhone 17 Pro</h1>
+    <h5>All out Pro.</h5>
+
+    <div id="links">
+      <button>Learn More</button>
+      <button>Buy</button>
+    </div>
+  </div>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <div class="card">
+      <h2>A17 Pro Chip</h2>
+      <p>Unmatched performance and efficiency.</p>
     </div>
 
-    
-    <div id="center">
-      <h1>iPhone 17 Pro</h1>
-      <h5>All out Pro.</h5>
-      <div id="links">
-        <button>Learn More</button>
-        <button>Buy</button>
-      </div>
+    <div class="card">
+      <h2>Pro Camera</h2>
+      <p>Capture like never before.</p>
     </div>
-    
-    
+
+    <div class="card">
+      <h2>Titanium Design</h2>
+      <p>Light. Strong. Premium.</p>
+    </div>
+  </section>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const cards = document.querySelectorAll(".card");
+
+    window.addEventListener("scroll", () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          card.classList.add("show");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
